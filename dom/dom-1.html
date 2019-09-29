@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div ng-app="" ng-init="switch=true">
+			<p>
+				<button ng-disabled="switch">Click me!</button>
+			</p>
+
+			<p>
+				<input type="checkbox" ng-model="switch">Button
+			</p>
+
+			<p>
+				{{ switch }}
+			</p>
+		</div>
+	</body>
+</html>

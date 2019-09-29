@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div ng-app="myApp" ng-controller="myCtrl">
+			<!-- <p>Enter a number: <input type="text" ng-model="hex"></p> -->
+			<p>Hex value: {{ hex }}</p>
+		</div>
+		<script>
+			app = angular.module('myApp', []);
+			app.service('hexafy', function() {
+				this.myFunc = function(x) {
+					return x.toString(16);
+				}
+			});
+			app.controller('myCtrl', function($scope, hexafy) {
+				$scope.hex = hexafy.myFunc(255);
+			});
+		</script>
+	</body>
+</html>
