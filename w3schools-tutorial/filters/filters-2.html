@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div ng-app="kritiq" ng-controller="kritiq-controller">
+			<p>Your name: <input type="text" ng-model="name"></p>
+			<p>{{name | lowercase}}</p>
+		</div>
+
+		<script>
+			var app = angular.module('kritiq', []);
+			app.controller('kritiq-controller', function($scope) {
+				$scope.name = 'Dummy value';
+			});
+		</script>
+	</body>
+</html>

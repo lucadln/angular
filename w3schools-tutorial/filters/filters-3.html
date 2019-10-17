@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div ng-app='kritiq' ng-controller='kritiq-controller'>
+			<ul>
+				<li ng-repeat="x in countries | orderBy: 'population'">{{x.name + ', ' + x.population}}</li>
+			</ul>
+		</div>
+
+		<script>
+			var app = angular.module('kritiq', []);
+			app.controller('kritiq-controller', function($scope) {
+				$scope.countries = [{name: 'Romania', population: '20mil'}, {name: 'The Netherlands', population: '10mil'}];
+			});
+		</script>
+	</body>
+</html>
