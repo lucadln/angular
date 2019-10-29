@@ -1,7 +1,7 @@
-	class Student {
+class Student {
 	fullName: string;
 	constructor(public firstName: string, public middleInitial: string, public lastName: string) {
-		this.fullName = firstName + " " + middleInitial + " " + lastName;
+		this.fullName = firstName + " " + middleInitial + ". " + lastName;
 	}
 }
 
@@ -11,9 +11,9 @@ interface Person {
 }
 
 function greeter(person: Person) {
-	return "Hello, " + person.firstName + " M. " + person.lastName;
+	return "Hello, " + person.firstName + " " + person.lastName;
 }
 
-let user = {firstName: "Lucian", lastName: "Ardelean"};
+let user = new Student("Lucian", "M", "Ardelean");
 
 document.body.textContent = greeter(user);
